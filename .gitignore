@@ -1,0 +1,22 @@
+/coverage
+/ .cache-loader
+node_modules
+*.log
+.env
+package-lock.json
+manifest.json
+/*-results.json
+/*.xml
+.DS_Store
+.cache
+/.vs
+out/
+.idea/*
+package/*/.idea
+test-report.xml
+/stats/
+.npmrc
+/dist/
+
+!.idea/runConfigurations
+!.idea/scopes
