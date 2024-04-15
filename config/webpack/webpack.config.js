@@ -1,6 +1,7 @@
 const path = require("path");
+const { merge } = require('webpack-merge');
 
-const loaders = require("./webpack.loaders.config");
+const loaders = require("./webpack.loader.config");
 const plugins = require("./webpack.plugin.config");
 const rootDirectory = process.cwd();
 
