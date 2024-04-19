@@ -7,7 +7,7 @@ const rootDirectory = process.cwd();
 
 const config = merge(loaders, plugins, {
     mode: "development",
-    entry: "./src/entrypoint.tsx",
+    entry: "./widget/src/entrypoint.tsx",
     output: {
         path: path.resolve(rootDirectory, "dist"),
         filename: "bundle.js"
