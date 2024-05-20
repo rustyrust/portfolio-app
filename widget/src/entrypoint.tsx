@@ -8,7 +8,6 @@ const root = createRoot(rootElement!);
 
 root.render(
     <StrictMode>
-        <h1>Hello World</h1>
         <App />
     </StrictMode>
 );

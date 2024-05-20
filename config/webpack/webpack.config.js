@@ -1,20 +1,16 @@
 const path = require("path");
-const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const loaders = require("./webpack.loader.config");
-const plugins = require("./webpack.plugin.config");
 
 const config = {
     mode: "development",
     entry: "./widget/src/entrypoint.tsx",
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "../../dist"),
         filename: "[name].bundle.[contenthash].js",
         clean: true,
     },
     devServer: {
-        static: path.join("./", 'dist'),
+        static: path.join(__dirname, '../../dist'),
         port: 3000,
         open: true,
         compress: true,
@@ -28,15 +24,12 @@ const config = {
                 exclude: ["/node_modules/", "/**/__tests__/**"],
             },
             {
-                test: /\.s[ac]ss$/i,
-                use: [
-                // Creates `style` nodes from JS strings
-                "style-loader",
-                // Translates CSS into CommonJS
-                "css-loader",
-                // Compiles Sass to CSS
-                "sass-loader",
-                ],
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
             }
         ],
     },
