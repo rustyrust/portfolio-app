@@ -1,4 +1,4 @@
-import ".HelloWorld.css"
+import "./HelloWorld.css"
 
 const HelloWorld = () => {
     return (
