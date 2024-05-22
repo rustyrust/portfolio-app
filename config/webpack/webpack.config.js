@@ -12,7 +12,11 @@ const config = {
     devServer: {
         static: path.join(__dirname, '../../dist'),
         port: 3000,
-        open: true,
+        open: {
+            app: {
+              name: 'chrome',
+            },
+        },
         compress: true,
         historyApiFallback: true
     },
@@ -24,7 +28,7 @@ const config = {
                 exclude: ["/node_modules/", "/**/__tests__/**"],
             },
             {
-                test: /\.scss$/,
+                test: /\.sass$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
