@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const config = {
     mode: "development",
     entry: "./widget/src/entrypoint.tsx",
@@ -28,7 +27,7 @@ const config = {
                 exclude: ["/node_modules/", "/**/__tests__/**"],
             },
             {
-                test: /\.sass$/i,
+                test: /\.scss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
